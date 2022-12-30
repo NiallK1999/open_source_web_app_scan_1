@@ -1,0 +1,285 @@
+@import "shadows";
+@import "../mixins";
+
+.places-list-container {
+    margin: 0 auto;
+    width: 65%;
+    max-width: 72rem;
+    padding: 0;
+}
+
+.places-list {
+    list-style: none;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    //display: grid;
+    //grid-template-columns: repeat(2, 1fr);
+    //grid-column-gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.places-list--columns {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    //margin: 1rem 1rem;
+}
+
+.places-list__item {
+    @include user-select(none);
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    // background: #eee;
+
+    transition: all ease 100ms;
+    // width: 50%;
+    // height: 10rem;
+
+    border-radius: 0.5rem;
+    background-color: $districtr-purple;
+    color: white;
+    cursor: pointer;
+
+    &:focus {
+        box-shadow: $focus-shadow;
+    }
+    &:hover {
+        background-color: $districtr-dark-purple;
+    }
+
+    &.choice {
+        cursor: default;
+        background-color: $districtr-purple;
+
+        button {
+            cursor: pointer;
+            background-color: #fff;
+            color: $districtr-purple;
+            padding: 0.2rem 0.6rem;
+            margin: 0.2rem 0.5rem;
+            border-radius: 0.2rem;
+            font-size: 100%;
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+        &:hover {
+            background-color: $districtr-purple;
+        }
+    }
+}
+
+.custom-input {
+    @include user-select(none);
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    // background: #eee;
+
+    transition: all ease 100ms;
+    // width: 50%;
+    // height: 10rem;
+
+    border-radius: 0.5rem;
+    background-color: $districtr-purple;
+    color: white;
+    cursor: pointer;
+
+    &:focus {
+        box-shadow: $focus-shadow;
+    }
+    &:hover {
+        background-color: $districtr-dark-purple;
+    }
+
+    &.choice {
+        cursor: default;
+        background-color: $districtr-purple;
+
+        button {
+            cursor: pointer;
+            background-color: #fff;
+            color: $districtr-purple;
+            padding: 0.2rem 0.6rem;
+            margin: 0.2rem 0.5rem;
+            border-radius: 0.2rem;
+            font-size: 100%;
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+        &:hover {
+            background-color: $districtr-purple;
+        }
+    }
+}
+
+
+.communities {
+    .state--available {
+        fill: $districtr-red;
+        &:hover {
+            fill: $districtr-red-dark;
+        }
+        &:active {
+            fill: $districtr-red-very-dark;
+        }
+    }
+    .places-list__item {
+        background-color: $districtr-red;
+        &:hover {
+            background-color: $districtr-red-dark;
+        }
+    }
+    .place-map__search {
+        color: #444;
+        border-bottom-color: #444;
+        caret-color: #444;
+    }
+    .media__title--primary,
+    .button--transparent {
+        color: #444;
+    }
+
+/*
+    .learn__more,
+    .learn__more:visited {
+        background: $mggg-blue;
+    }
+
+    .learn__more:hover,
+    .learn__more:active {
+        background: $mggg-dark-blue;
+    }
+*/
+}
+
+.card {
+
+    .places-list__item {
+        background-color: $mggg-dark_blue;
+        &:hover {
+            background-color: $mggg-very_dark_blue;
+        }
+    }
+}
+
+.places-list__item--small {
+    max-width: 14rem;
+    margin: 0.5rem;
+}
+
+.place-info {
+    margin: 0.25rem 0;
+    font-weight: normal;
+}
+
+.plan-loader {
+    margin: 1rem auto;
+    text-align: center;
+    color: #444;
+}
+
+// @media only screen and (max-width: 600px) {
+.places-list-container {
+    width: 100%;
+}
+.places-list__item {
+    height: auto;
+    width: auto;
+}
+// }
+
+.start-districting {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "form form form form"
+        "map map map map";
+    grid-template-columns: auto 1fr 1fr auto;
+    height: 700px;
+    height: 110vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.start-districting--alone {
+    padding: 1rem 0;
+}
+
+.start-districting__title {
+    text-align: center;
+    margin: 0;
+    grid-area: title;
+    color: black;
+}
+
+.request-new-place {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.call-to-request {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .call-to-request {
+        font-size: 1.5rem;
+    }
+}
+
+/*
+.learn__more,
+.learn__more:visited {
+    background: $districtr-red;
+    color: white;
+
+    border-radius: 0.5rem;
+    // padding: 0.2rem 0.4rem;
+    padding: 0.1rem 0.4rem;
+
+    font-weight: 600;
+    font-family: $font-family;
+
+    margin-top: 0.5rem;
+    outline: 0;
+    border: none;
+
+    line-height: 1.5;
+    display: block;
+    text-align: center;
+}
+
+.learn__more:hover,
+.learn__more:active {
+    cursor: pointer;
+    color: white;
+    background: $districtr-red-dark;
+}
+
+.learn__more:active {
+    outline: 0;
+}
+
+.learn__more:focus {
+    box-shadow: $focus-shadow;
+    outline: 0;
+}
+*/
