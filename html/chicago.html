@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Chicago | Districtr</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/css/chicago.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Playfair+Display:700"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <main id="root" class="place">
+            <article class="place__content">
+                <h1 class="headline place__name">Chicago</h1>
+                <p>
+                    Chicago currently has fifty wards (i.e., districts) that
+                    each elect a single alderman to serve on the city council.
+                    As part of <a href="https://mggg.org">MGGG's</a>
+                    <a href="https://mggg.org/Chicago.pdf"
+                        >Study of Reform Proposals for Chicago City Council</a
+                    >, we set out to explore how different districts, or moving
+                    to multi-member districts, might impact representation and
+                    better promote a fair and responsive city government.
+                    <a href="https://mggg.org/posts/chicago"
+                        >You can read more background and access the report
+                        here.</a
+                    >
+                </p>
+                <p>
+                    We invite you to use Districtr to draw your own wards for
+                    Chicago. You can build
+                    <strong>fifty single-member wards</strong>,
+                    <strong>ten multi-member districts</strong>, or
+                    <strong>multi-member districts of any size</strong>, using
+                    either <strong>precincts</strong> or
+                    <strong>community areas</strong> as the basic building
+                    blocks.
+                </p>
+                <h2 class="place__subheading">Start drawing districts</h2>
+                <div id="districting-options"></div>
+                <h2 class="place__subheading">
+                    See the plans featured in the report
+                </h2>
+                <p>
+                    Click on any of the districting plans below to open it in
+                    Districtr.
+                </p>
+                <div id="plans"></div>
+                <dl class="dfn-list">
+                    <div class="dfn-list__row">
+                        <dt class="dfn-list__term">
+                            Concentrated poverty
+                        </dt>
+                        <dd class="dfn-list__caption">
+                            &ge; 25% of households under $20K annual income
+                        </dd>
+                    </div>
+                    <div class="dfn-list__row">
+                        <dt class="dfn-list__term">Concentrated wealth</dt>
+                        <dd class="dfn-list__caption">
+                            &ge; 25% of households over $150K annual income
+                        </dd>
+                    </div>
+                    <div class="dfn-list__row">
+                        <dt class="dfn-list__term">Segregated</dt>
+                        <dd class="dfn-list__caption">
+                            only one racial group exceeds 1/4 of population
+                        </dd>
+                    </div>
+                    <div class="dfn-list__row">
+                        <dt class="dfn-list__term">Hypersegregated</dt>
+                        <dd class="dfn-list__caption">
+                            only one racial group exceeds 1/6 of population
+                        </dd>
+                    </div>
+                    <div class="dfn-list__row">
+                        <dt class="dfn-list__term">Highly diverse</dt>
+                        <dd class="dfn-list__caption">
+                            three racial groups exceed 1/4 of population
+                        </dd>
+                    </div>
+                </dl>
+            </article>
+        </main>
+        <script src="/es6/chicago.js"></script>
+        <script>
+            if (Object.assign === undefined || fetch === undefined) {
+                document.write(
+                    '<script src="https://polyfill.io/v3/polyfill.min.js?features=default,es5,es6,es7,fetch"><\/script>'
+                );
+                document.write(
+                    '<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.7/webcomponents-loader.js"><\/script>'
+                );
+                document.write('<script src="/es5/chicago.js"><\/script>');
+                document.write("<script>ieBundle();<\/script>");
+            } else {
+                bundle();
+            }
+        </script>
+    </body>
+</html>
