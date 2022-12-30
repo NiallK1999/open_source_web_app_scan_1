@@ -1,0 +1,21 @@
+## Plans:
+/assets/data/*
+  Access-Control-Allow-Origin: *
+/assets/plans/*
+  Access-Control-Allow-Origin: *
+/es6/embedded.js
+  Access-Control-Allow-Origin: *
+/es5/embedded.js
+  Access-Control-Allow-Origin: *
+/css/*
+  Access-Control-Allow-Origin: *
+
+## Alternate deploys
+/.netlify/*
+  Access-Control-Allow-Origin: https://massachusetts-mapping.org
+
+## Cache control
+/*
+  cache-control: max-age=0
+  cache-control: no-cache
+  cache-control: no-store
