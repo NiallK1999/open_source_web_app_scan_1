@@ -5,5 +5,5 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine AS deploy
+FROM nginx:1.25.4-alpine3.18 AS deploy
 COPY --from=build /app/dist /usr/share/nginx/html
